@@ -1,5 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
+#include <atomic>
 
 namespace Render
 {
@@ -8,6 +9,7 @@ namespace Render
 
 	extern bool bIsLinesDestroyable;
 	extern VertexArray lines;
+	extern atomic<bool> bIsWindowClosed;
 
 	extern void GetWallsFromFile();
 

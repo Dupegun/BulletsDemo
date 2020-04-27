@@ -46,7 +46,7 @@ int main()
 	
 	auto start = chrono::high_resolution_clock::now();
 
-	while (true)
+	while (!Render::bIsWindowClosed.load())
 	{
 		chrono::duration<float> duration = chrono::high_resolution_clock::now() - start;
 		start = chrono::high_resolution_clock::now();

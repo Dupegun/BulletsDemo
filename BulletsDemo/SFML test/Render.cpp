@@ -13,6 +13,7 @@ namespace Render
 	bool bIsLinesDestroyable = true;
 	VertexArray lines;
 	RenderWindow window;
+	atomic<bool> bIsWindowClosed(false);
 
 	void GetWallsFromFile()
 	{
@@ -70,7 +71,10 @@ namespace Render
 			while (window.pollEvent(event))
 			{
 				if (event.type == sf::Event::Closed)
+				{
 					window.close();
+					bIsWindowClosed = true;
+				}
 			}
 
 			window.clear();

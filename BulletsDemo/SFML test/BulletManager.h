@@ -31,7 +31,6 @@ private:
 	void AddBullet(sf::Vector2f pos, sf::Vector2f dir, float speed, float time);
 
 	void AddVertex(const sf::Vector2f& position);
-	void RemoveVertex(size_t index);
 
 	VectorBullets bullets;
 	sf::VertexArray bulletsVertices;

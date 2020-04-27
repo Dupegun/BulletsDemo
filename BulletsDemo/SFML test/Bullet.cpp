@@ -1,7 +1,7 @@
 #include "Bullet.h"
-#include <iostream>
 #include "Render.h"
 #include "BulletManager.h"
+#include <iostream>
 
 Bullet::Bullet(Vector2f pos, Vector2f dir, float initialSpeed, float inLifeTime)
 {
@@ -55,6 +55,8 @@ void Bullet::Move(float DeltaTime)
 
 			break;
 		}
+
+		///Calculating dot collision with line segment
 		/*float CrossProd2D = Render::GetCrossProduct2D(A-B, A-newPosition);
 		if (abs(CrossProd2D) < 800)
 		{

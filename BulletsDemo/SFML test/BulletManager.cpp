@@ -1,6 +1,5 @@
 #include "BulletManager.h"
 #include "Bullet.h"
-#include <future>
 #include <chrono>
 #include <iostream>
 #include <algorithm>
@@ -55,6 +54,7 @@ void BulletManager::Update(float time)
 		auto bullet = GetBullets()[i];
 
 		auto& vertex = GetVertices()[i];
+
 		if (bullet && bullet->GetIsActive())
 		{
 			bullet->elapsedTime += time;
@@ -63,6 +63,7 @@ void BulletManager::Update(float time)
 				bullet->Move(time);
 				vertex.position = bullet->GetPosition();
 				vertex.color = sf::Color::Red;
+				
 				continue;
 			}
 			else
@@ -99,9 +100,4 @@ void BulletManager::AddVertex(const sf::Vector2f& position)
 	sf::Vertex newVertex(position);
 	newVertex.color = sf::Color::Red;
 	bulletsVertices.append(newVertex);
-}
-
-void BulletManager::RemoveVertex(size_t index)
-{
-	std::lock_guard<std::mutex> lock(verticesmx);
 }

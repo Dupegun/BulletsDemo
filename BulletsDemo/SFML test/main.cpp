@@ -1,15 +1,11 @@
 ﻿
 #include <iostream>
-#include <vector>
 #include <thread>
 #include <chrono>
+
 #include "Bullet.h"
-#include <cmath>
-#include <mutex>
 #include "BulletManager.h"
-#include <memory>
 #include "Render.h"
-#include <time.h>
 
 using namespace std;
 
@@ -41,7 +37,8 @@ int main()
 	thread renderThread(Render::RenderLoop);
 	renderThread.detach();
 
-	this_thread::sleep_for(chrono::milliseconds(500));
+	this_thread::sleep_for(chrono::milliseconds(250));
+
 	thread inputThread(InputLoop);
 	inputThread.detach();
 

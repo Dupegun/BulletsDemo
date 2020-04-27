@@ -1,10 +1,11 @@
 
 #include "Render.h"
+#include "BulletManager.h"
+#include "Bullet.h"
+
 #include <thread>
 #include <chrono>
 #include <fstream>
-#include "BulletManager.h"
-#include "Bullet.h"
 #include <cmath>
 
 namespace Render

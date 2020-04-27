@@ -28,3 +28,5 @@ from main thread, but Fire method should be called from different threads.
 STL or Boost can be used.
 * Optimize your code.
 * Comment the code to the degree that you feel is necessary.
+
+[![20K Bullets](http://img.youtube.com/vi/undkD-UL0Ls/0.jpg)](https://www.youtube.com/watch?v=undkD-UL0Ls "20K Bullets")
